@@ -21,7 +21,7 @@ const ContentContainer = styled("div")`
   @media ${device.laptop} {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     padding: 40px;
   }
 `;
