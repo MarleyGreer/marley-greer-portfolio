@@ -52,7 +52,8 @@ const ParagraphText = styled(P)`
 `;
 
 const List = styled("ul")`
-  list-style-type: square;
+  list-style-type: circle;
+  padding-left: 20px;
 `;
 
 export const Resume = () => {

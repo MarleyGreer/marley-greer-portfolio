@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FullWidthContainer, PaddedContainer } from "../Themes/Containers";
 import { colours } from "../Themes/Colours";
-import { H1, P } from "../Themes/Fonts";
+import { H1, H4, P } from "../Themes/Fonts";
 import { device } from "../Themes/Devices";
 
 const Background = styled(FullWidthContainer)`
@@ -54,6 +54,26 @@ const Image = styled("img")`
   }
 `;
 
+const List = styled("ul")`
+  list-style-type: circle;
+  padding-left: 20px;
+`;
+
+const SkillsContainer = styled("div")`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const SkillContainer = styled("div")`
+justify-content: space-between;
+flex: 0 1 33%;
+}
+
+`;
+
+const SkillHeader = styled(H4)`
+  color: ${colours.tumbleweed};
+`;
 export const AboutMe = () => {
   return (
     <Background>
@@ -62,23 +82,86 @@ export const AboutMe = () => {
         <ContentContainer>
           <ParagraphContainer>
             <ParagraphText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              sagittis sapien eget tortor volutpat ultrices. Ut eget massa
-              consectetur, ultrices est non, interdum neque. Praesent nisi mi,
-              hendrerit eget lectus eu, aliquam dapibus odio. Donec eleifend
-              blandit eros in tristique. Maecenas ac ante condimentum, semper
-              odio non, condimentum sem. Etiam porta dignissim ipsum at
-              vestibulum. Aenean lobortis urna quis mollis porta.
+              Hello, my name is Marley. I've always been extremely interested in
+              technology and the way things worked, which drove me to choose web
+              development as my ideal career of choice.
             </ParagraphText>
             <ParagraphText>
-              Nulla lacinia, justo a tincidunt vestibulum, purus turpis accumsan
-              lectus, euismod interdum dui metus at ante. Donec vitae consequat
-              felis. Donec vel nibh hendrerit, semper urna aliquam, lobortis
-              ipsum. Phasellus rhoncus leo at augue convallis, eu cursus justo
-              vehicula. Duis faucibus lobortis odio, nec fermentum odio molestie
-              eu. Nullam ultricies dui urna, eget congue quam posuere id.
-              Phasellus blandit orci vitae placerat pellentesque.
+              After doing some online courses I enrolled in a Full Stack
+              Development Course with Le Wagon. Throughout my studies I worked
+              with Git/Github, HTML, CSS, Javascript, APIs, Active Record, SQL
+              Queries and Ruby On Rails, building and deploying web
+              applications.
             </ParagraphText>
+            <ParagraphText>
+              Prior to studying, I worked at Flight Centre Travel Group for over
+              7 years. Throughout my time I worked within various roles
+              including 5 years in the leadership team where I have developed a
+              broad set of transferable soft skills.
+            </ParagraphText>
+            <ParagraphText>
+              Since leaving Flight Centre Travel Group, I have been fortunate
+              enough to join the wonderful team at Exo Digital, a Melbourne
+              based web design and development agency.
+            </ParagraphText>
+            <ParagraphText>
+              Here are a few technologies I’ve worked with in the past:
+            </ParagraphText>
+            <SkillsContainer>
+              <SkillContainer>
+                <SkillHeader>Languages</SkillHeader>
+                <List>
+                  <li>
+                    <ParagraphText>JavaScript </ParagraphText>
+                  </li>
+                  <li>
+                    <ParagraphText>TypeScript</ParagraphText>
+                  </li>
+                  <li>
+                    <ParagraphText>Ruby</ParagraphText>
+                  </li>
+                  <li>
+                    <ParagraphText>HTML</ParagraphText>
+                  </li>
+                  <li>
+                    <ParagraphText>CSS</ParagraphText>
+                  </li>
+                </List>
+              </SkillContainer>
+
+              <SkillContainer>
+                <SkillHeader> Libraries</SkillHeader>
+                <List>
+                  <li>
+                    <ParagraphText>React</ParagraphText>
+                  </li>
+                  <li>
+                    <ParagraphText>React Native</ParagraphText>
+                  </li>
+                  <li>
+                    <ParagraphText>Node.js</ParagraphText>
+                  </li>
+                  <li>
+                    <ParagraphText> Express.js</ParagraphText>
+                  </li>
+                  <li>
+                    <ParagraphText>Ruby On Rails</ParagraphText>
+                  </li>
+                </List>
+              </SkillContainer>
+
+              <SkillContainer>
+                <SkillHeader>Testing</SkillHeader>
+                <List>
+                  <li>
+                    <ParagraphText>Jest</ParagraphText>
+                  </li>
+                  <li>
+                    <ParagraphText>Jasmine</ParagraphText>
+                  </li>
+                </List>
+              </SkillContainer>
+            </SkillsContainer>
           </ParagraphContainer>
           <Image
             src={require("./images/about-me.png")}

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FullWidthContainer, PaddedContainer } from "../Themes/Containers";
 import { colours } from "../Themes/Colours";
-import { H1, H2, P } from "../Themes/Fonts";
+import { H1, H2, H4, P } from "../Themes/Fonts";
 import { device } from "../Themes/Devices";
 
 const Background = styled(FullWidthContainer)`
@@ -74,6 +74,10 @@ const TextContainer = styled("div")`
 
 const Description = styled(P)``;
 
+const TechHeader = styled(H4)`
+  padding-bottom: 16px;
+`;
+
 export const Projects = () => {
   return (
     <Background>
@@ -84,96 +88,123 @@ export const Projects = () => {
             <TextContainer>
               <ProjectHeader>Let's Go Community</ProjectHeader>
               <Description>
-                Suspendisse feugiat quis libero eu ultricies. Quisque sagittis a
-                turpis ac iaculis. Sed tempus in ante dapibus elementum. Aenean
-                nisi dolor, lobortis congue lorem sit amet, imperdiet pretium
-                nulla. In varius nisi ut tellus dapibus, id tincidunt turpis
-                pulvinar. Morbi fringilla pellentesque mi cursus volutpat.
-                Aliquam mauris arcu, blandit et eros sit amet, molestie volutpat
-                massa. Cras et posuere justo. Proin quis eros ut purus lobortis
-                ultricies vel et turpis. Nam nec blandit tortor. Curabitur
-                sapien leo, suscipit at faucibus viverra, mollis eget massa.
-                Integer nisl diam, fermentum sed arcu at, fringilla tempor ex.
-                In aliquam ex urna, et viverra sapien ullamcorper at. Phasellus
-                consequat, ex sed posuere pretium, magna eros ultricies arcu, eu
-                lacinia odio orci et mauris. Pellentesque porta lectus quis
-                lorem fermentum, eget tincidunt urna lacinia. Pellentesque
-                habitant morbi tristique senectus et netus et malesuada fames ac
-                turpis egestas.
+                An IOS application built with the goal to support local
+                businesses by driving users through challenges that direct their
+                attention to supporting the community.
               </Description>
+              <Description>
+                Businesses customize their profile and set up challenges for
+                their customers to complete such as reviewing the business,
+                checking in or completing a small quiz. Once the challenge is
+                completed, the user will receive a reward which has been
+                predefined by the business such as a discount to use in store.
+              </Description>
+              <Description>
+                Features include custom built CMS for businesses to manage
+                challenges and their business details, a news feed displaying
+                recently completed challenges in the area and a challenge
+                leaderboard.
+              </Description>
+              <TechHeader>
+                React Native | React | Typescript | Next.js | Node.js |
+                Express.js | PostgreSQL
+              </TechHeader>
             </TextContainer>
-            <Image
-              src={require("./images/lets-go-community-display.png")}
-              alt="Let's Go Community Project"
-            />
+            <a
+              target="_blank"
+              href="https://exodigital.com.au/case-studies/lets-go"
+            >
+              <Image
+                src={require("./images/lets-go-community-display.png")}
+                alt="Let's Go Community Project"
+              />
+            </a>
           </ProjectContainer>
           <ProjectContainer>
             <TextContainer>
               <ProjectHeader>Streamgear</ProjectHeader>
               <Description>
-                Phasellus ex nunc, tempus at nibh a, porttitor suscipit tortor.
-                Quisque mattis aliquet dui, vel facilisis ex scelerisque in.
-                Aenean pellentesque, risus eget pellentesque laoreet, arcu
-                tellus tempus tortor, id vestibulum nibh erat vitae nulla.
-                Integer eu tortor non metus iaculis tempus. Praesent vestibulum
-                dolor a ipsum egestas pellentesque. Maecenas malesuada risus a
-                leo cursus tincidunt. In a felis ipsum. Mauris ac rhoncus dolor,
-                non vulputate neque. Proin tempor dui sed diam vehicula cursus.
-                Etiam a turpis rhoncus, finibus eros in, finibus lectus.
-                Vestibulum malesuada pretium libero ac placerat. Morbi ultrices
-                dui porttitor scelerisque malesuada.
+                Streamgear's vision is to support, celebrate and nurture gamers,
+                elevating their unique culture into the mainstream.
               </Description>
+              <Description>
+                The company is looking to disrupt the extremely competitive
+                market of cheap tech from IT retailers.
+              </Description>
+              <Description>
+                Features include add to cart functionality, search, responsive
+                design, headless shopify integration, social media logins and a
+                gamified points system.
+              </Description>
+              <TechHeader>
+                React | Node.js | Express.js | Shopify APIs | Liquid |
+                PostgreSQL
+              </TechHeader>
             </TextContainer>
-            <Image
-              src={require("./images/streamgear.png")}
-              alt="Streamgear Project"
-            />
+            <a target="_blank" href="https://www.streamgear.com/">
+              <Image
+                src={require("./images/streamgear.png")}
+                alt="Streamgear Project"
+              />
+            </a>
           </ProjectContainer>
           <ProjectContainer>
             <TextContainer>
               <ProjectHeader>Blended</ProjectHeader>
               <Description>
-                Proin pellentesque rutrum erat ut viverra. Donec ornare lectus
-                ultricies urna venenatis viverra. Nunc nec leo at magna accumsan
-                dapibus. Quisque eget aliquet libero. Duis a mattis mauris.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci
-                varius natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Phasellus eget maximus urna. Fusce et
-                nunc varius, pretium arcu ut, porta est. Quisque bibendum est
-                risus, ut finibus odio euismod ut. Pellentesque vulputate
-                euismod tristique. Aliquam congue lobortis accumsan.
+                Blended is a platform for make-up artists, hairdressers and
+                beauticians to showcase their work, make bookings and keep in
+                touch with their customers all in one place.
               </Description>
+              <Description>
+                Features include personalised profiles, an inspiration board
+                which links back to the artist's profile, live chat, reviews and
+                a built in live booking system.
+              </Description>
+              <Description>
+                Artists can add their regular working hours along with any
+                annual leave days to ensure all bookings fit in with their
+                schedule.
+              </Description>
+              <TechHeader>
+                Ruby On Rails | Javascript ES6 | CSS | HTML
+              </TechHeader>
             </TextContainer>
-
-            <Image
-              src={require("./images/blended.png")}
-              alt="Blended Project"
-            />
+            <a target="_blank" href="https://youtu.be/sQaHzGYhg28?t=86">
+              <Image
+                src={require("./images/blended.png")}
+                alt="Blended Project"
+              />
+            </a>
           </ProjectContainer>
           <ProjectContainer>
             <TextContainer>
               <ProjectHeader>Book The Look</ProjectHeader>
               <Description>
-                A peer to peer garmet rental market place. This web app gives
+                A peer to peer garment rental marketplace. This web app gives
                 users the ability to search for garments nearby or filter by
-                category, size colour or price.
+                category, size, colour or price.
               </Description>
               <Description>
                 A built in calendar reservation system calculates the total
                 cost, sends the booking request and blocks the dates out to
-                ensure the garment doesn't get double booked.
+                ensure availability status remains accurate.
               </Description>
               <Description>
                 The owner then has the ability to accept or decline the booking
                 request. All bookings are displayed on private dashboards for
                 users to keep track of upcoming events.
               </Description>
+              <TechHeader>
+                Ruby On Rails | Javascript ES6 | CSS | HTML
+              </TechHeader>
             </TextContainer>
-
-            <Image
-              src={require("./images/book-the-look.png")}
-              alt="Book The Look Project"
-            />
+            <a target="_blank" href="https://bookthelook.herokuapp.com">
+              <Image
+                src={require("./images/book-the-look.png")}
+                alt="Book The Look Project"
+              />
+            </a>
           </ProjectContainer>
           <ProjectContainer>
             <TextContainer>
@@ -183,12 +214,19 @@ export const Projects = () => {
                 share your own recipe's with other users or search and review
                 your favourite recipies.
               </Description>
+              <TechHeader>
+                Ruby On Rails | Javascript ES6 | CSS | HTML{" "}
+              </TechHeader>
             </TextContainer>
-
-            <Image
-              src={require("./images/mister-cocktail.png")}
-              alt="Mister Cocktail Project"
-            />
+            <a
+              target="_blank"
+              href="https://mister-cocktail-marley.herokuapp.com/"
+            >
+              <Image
+                src={require("./images/mister-cocktail.png")}
+                alt="Mister Cocktail Project"
+              />
+            </a>
           </ProjectContainer>
         </ProjectsContainer>
       </Container>
