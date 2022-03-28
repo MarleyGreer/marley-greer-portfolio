@@ -53,7 +53,6 @@ const Image = styled("img")`
   height: 290px;
   object-fit: cover;
   border-radius: 80px;
-  padding-top: 8px;
   @media ${device.tablet} {
     height: 290px;
     object-fit: cover;
@@ -63,6 +62,11 @@ const Image = styled("img")`
     width: 330px;
     height: 330px;
     object-fit: cover;
+  }
+  border: solid 0px ${colours.brownSugar};
+  transition: border-width 0.2s linear;
+  &:hover {
+    border-width: 5px;
   }
 `;
 
