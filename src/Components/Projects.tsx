@@ -53,6 +53,7 @@ const Image = styled("img")`
   height: 290px;
   object-fit: cover;
   border-radius: 80px;
+
   @media ${device.tablet} {
     height: 290px;
     object-fit: cover;
@@ -62,11 +63,21 @@ const Image = styled("img")`
     width: 330px;
     height: 330px;
     object-fit: cover;
+    margin: 5px;
+    border: solid 0px ${colours.brownSugar};
+    transition: width 0.6s, height 0.6s;
+
+    &:hover {
+      width: 360px;
+      height: 360px;
+    }
   }
-  border: solid 0px ${colours.brownSugar};
-  transition: border-width 0.2s linear;
-  &:hover {
-    border-width: 5px;
+`;
+
+const ImageContainer = styled("div")`
+  @media ${device.laptop} {
+    width: 360px;
+    height: 360px;
   }
 `;
 
@@ -121,10 +132,12 @@ export const Projects = () => {
               target="_blank"
               href="https://exodigital.com.au/case-studies/lets-go"
             >
-              <Image
-                src={require("./images/lets-go-community-display.png")}
-                alt="Let's Go Community Project"
-              />
+              <ImageContainer>
+                <Image
+                  src={require("./images/lets-go-community-display.png")}
+                  alt="Let's Go Community Project"
+                />
+              </ImageContainer>
             </a>
           </ProjectContainer>
           <ProjectContainer>
@@ -149,10 +162,12 @@ export const Projects = () => {
               </TechHeader>
             </TextContainer>
             <a target="_blank" href="https://www.streamgear.com/">
-              <Image
-                src={require("./images/streamgear.png")}
-                alt="Streamgear Project"
-              />
+              <ImageContainer>
+                <Image
+                  src={require("./images/streamgear.png")}
+                  alt="Streamgear Project"
+                />
+              </ImageContainer>
             </a>
           </ProjectContainer>
           <ProjectContainer>
@@ -178,10 +193,12 @@ export const Projects = () => {
               </TechHeader>
             </TextContainer>
             <a target="_blank" href="https://youtu.be/sQaHzGYhg28?t=86">
-              <Image
-                src={require("./images/blended.png")}
-                alt="Blended Project"
-              />
+              <ImageContainer>
+                <Image
+                  src={require("./images/blended.png")}
+                  alt="Blended Project"
+                />
+              </ImageContainer>
             </a>
           </ProjectContainer>
           <ProjectContainer>
@@ -207,10 +224,12 @@ export const Projects = () => {
               </TechHeader>
             </TextContainer>
             <a target="_blank" href="https://bookthelook.herokuapp.com">
-              <Image
-                src={require("./images/book-the-look.png")}
-                alt="Book The Look Project"
-              />
+              <ImageContainer>
+                <Image
+                  src={require("./images/book-the-look.png")}
+                  alt="Book The Look Project"
+                />
+              </ImageContainer>
             </a>
           </ProjectContainer>
           <ProjectContainer>
@@ -229,10 +248,12 @@ export const Projects = () => {
               target="_blank"
               href="https://mister-cocktail-marley.herokuapp.com/"
             >
-              <Image
-                src={require("./images/mister-cocktail.png")}
-                alt="Mister Cocktail Project"
-              />
+              <ImageContainer>
+                <Image
+                  src={require("./images/mister-cocktail.png")}
+                  alt="Mister Cocktail Project"
+                />
+              </ImageContainer>
             </a>
           </ProjectContainer>
         </ProjectsContainer>
