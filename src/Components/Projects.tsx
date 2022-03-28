@@ -72,10 +72,13 @@ const TextContainer = styled("div")`
   }
 `;
 
-const Description = styled(P)``;
+const Description = styled(P)`
+  color: ${colours.jet};
+`;
 
 const TechHeader = styled(H4)`
   padding-bottom: 16px;
+  color: ${colours.jet};
 `;
 
 export const Projects = () => {
