@@ -23,7 +23,7 @@ const LightText = styled(H1)`
 const Image = styled("img")`
   width: 64px;
   height: 64px;
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
   @media ${device.tablet} {
     width: 100px;
     height: 100px;
@@ -42,49 +42,78 @@ const ContactContainer = styled("div")`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.8s;
+  border-radius: 20px;
+  padding: 12px;
   @media ${device.tablet} {
-    padding: 60px;
+    margin: 10px 0px;
+    padding: 20px;
   }
   @media ${device.laptop} {
     flex-direction: row;
-    padding: 80px 0px;
+    margin: 20px 0px;
+    padding: 20px;
+  }
+
+  &:hover ${Text} {
+    color: ${colours.tumbleweed};
+  }
+  &:hover {
+    background-color: ${colours.gainsboro};
   }
 `;
 
 const Link = styled("a")`
   text-decoration: none;
-
-  &:hover ${Image} {
-    box-shadow: inset 100px 0 0 0 ${colours.brownSugar};
-  }
 `;
 
 export const Contact = () => {
+  const links = [
+    {
+      href: "https://github.com/MarleyGreer",
+      text: "github.com/marleygreer",
+      icon: require("./images/github.png"),
+      alt: "Github Icon",
+      target: true,
+    },
+    {
+      href: "https://www.linkedin.com/in/marleygreer",
+      text: "linkedin.com/in/marleygreer",
+      icon: require("./images/linked-in.png"),
+      alt: "Linked In Icon",
+      target: true,
+    },
+    {
+      href: "mailto: marley.greer93@gmail.com",
+      text: "marley.greer93@gmail.com",
+      icon: require("./images/email.png"),
+      alt: "Email Icon",
+    },
+
+    {
+      href: "tel:+61423889644",
+      text: "0423 889 644",
+      icon: require("./images/mobile.png"),
+      alt: "Mobile Icon",
+    },
+  ];
+
   return (
     <Background>
       <Container>
         <LightText>GET IN TOUCH.</LightText>
-        <Link href="mailto: marley.greer93@gmail.com">
-          <ContactContainer>
-            <Image src={require("./images/email.png")} alt="Email Icon" />
-            <Text>marley.greer93@gmail.com</Text>
-          </ContactContainer>
-        </Link>
-        <Link href="tel:+61423889644">
-          <ContactContainer>
-            <Image src={require("./images/phone.png")} alt="Phone Icon" />
-            <Text>0423 889 644</Text>
-          </ContactContainer>
-        </Link>
-        <Link target="_blank" href="https://www.linkedin.com/in/marleygreer">
-          <ContactContainer>
-            <Image
-              src={require("./images/linked-in.png")}
-              alt="Linked In Icon"
-            />
-            <Text>linkedin.com/in/marleygreer</Text>
-          </ContactContainer>
-        </Link>
+        {links.map((link, index) => (
+          <Link
+            href={link.href}
+            target={link.target ? "_blank" : ""}
+            key={index}
+          >
+            <ContactContainer>
+              <Image src={link.icon} alt={link.alt} />
+              <Text>{link.text}</Text>
+            </ContactContainer>
+          </Link>
+        ))}
       </Container>
     </Background>
   );
