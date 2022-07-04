@@ -53,13 +53,12 @@ const ContactContainer = styled("div")`
     flex-direction: row;
     margin: 20px 0px;
     padding: 20px;
-  }
-
-  &:hover ${Text} {
-    color: ${colours.tumbleweed};
-  }
-  &:hover {
-    background-color: ${colours.gainsboro};
+    &:hover ${Text} {
+      color: ${colours.tumbleweed};
+    }
+    &:hover {
+      background-color: ${colours.gainsboro};
+    }
   }
 `;
 

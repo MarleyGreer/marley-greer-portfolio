@@ -51,7 +51,7 @@ const H3 = styled.h3`
     font-size: 32px;
   }
   @media ${device.laptop} {
-    font-size: 50px;
+    font-size: 32px;
   }
 `;
 

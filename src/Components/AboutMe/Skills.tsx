@@ -44,12 +44,12 @@ const SkillButtonContainer = styled("div")`
   @media ${device.tablet} {
     margin: 8px;
     box-shadow: 2px 2px 11px 3px rgb(0 0 0 / 20%);
-  }
-  &:hover {
-    cursor: pointer;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    animation-name: ${shakeAnimation};
+    &:hover {
+      cursor: pointer;
+      animation-duration: 0.5s;
+      animation-iteration-count: 1;
+      animation-name: ${shakeAnimation};
+    }
   }
 `;
 
